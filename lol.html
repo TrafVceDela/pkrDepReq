@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ur">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI گیم پیشنگوئی - پاکستان</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .console-box {
+        font-family: monospace;
+        background-color: #1a1a1a;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        box-shadow: 0 0 20px #00ff88;
+        color: #00ff88;
+        height: 250px;
+        overflow-y: auto;
+      }
+      .loading-screen {
+        font-family: monospace;
+        background: #000;
+        color: #00ff88;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        flex-direction: column;
+        z-index: 50;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+      }
+      .hidden-screen {
+        display: none;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-900 text-white font-sans">
+    <div id="loading" class="loading-screen">
+      <p>لوڈ ہو رہا ہے... براہ کرم انتظار کریں جب تک ہم آپ کا تجربہ تیار کرتے ہیں۔</p>
+    </div>
+
+    <div id="mainContent" class="hidden-screen">
+      <header class="w-full bg-gray-800 p-4 flex justify-between items-center">
+        <h1 class="text-xl font-bold text-green-400">1xBet AI پیشنگو</h1>
+        <nav class="space-x-4">
+          <a href="#how" class="hover:text-green-400">یہ کیسے کام کرتا ہے</a>
+          <a href="#games" class="hover:text-green-400">گیمز</a>
+          <a href="#start" class="hover:text-green-400">ابھی شروع کریں</a>
+        </nav>
+      </header>
+
+      <section
+        class="min-h-screen flex flex-col items-center justify-center px-4 text-center"
+      >
+        <h2 class="text-3xl md:text-5xl font-bold mb-6">
+          AI گیم پیشنگوئی کے ساتھ حقیقی پیسے کمائیں
+        </h2>
+        <p class="max-w-xl mb-8 text-gray-300">
+          ایوی ایٹر، مائنز اور پینلٹی جیسے گیمز جیتنے کے لیے ہمارے AI کا استعمال کرنے والے ہزاروں صارفین میں شامل ہوں۔ پیشنگوئی کی درستگی 96% تک، ریئل ٹائم سگنلز، اور تیز واپسی!
+        </p>
+
+        <button
+          id="startButton"
+          class="bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-xl text-lg transition"
+        >
+          ابھی کمائیں شروع کریں
+        </button>
+
+        <!-- Input Section -->
+        <div id="idInputSection" class="hidden mt-6 max-w-sm w-full">
+          <input
+            id="betIdInput"
+            type="text"
+            inputmode="numeric"
+            pattern="\d*"
+            placeholder="آپ کا 1xBet ID"
+            class="w-full p-3 rounded-lg border border-gray-600 bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-green-400"
+          />
+          <button
+            id="submitIdBtn"
+            class="mt-4 w-full bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-lg"
+          >
+            ID جمع کروائیں
+          </button>
+          <p id="inputError" class="hidden mt-2 text-red-500 text-sm">
+            براہ کرم ایک درست عددی 1xBet ID درج کریں۔
+          </p>
+        </div>
+
+        <!-- Error Message -->
+        <div
+          id="errorBox"
+          class="hidden bg-red-600 p-6 rounded-xl max-w-md mx-auto mt-6"
+        >
+          <h2 class="text-xl font-bold mb-2">⚠️ ڈپازٹ نہیں ملا</h2>
+          <p class="mb-4">
+            ایسا لگتا ہے کہ آپ نے ابھی تک فنڈز جمع نہیں کرائے ہیں۔ پیشنگوئی تک رسائی حاصل کرنے کے لیے براہ کرم اپنے 1xBet اکاؤنٹ میں 3000 PKR کا ڈپازٹ کریں۔
+          </p>
+          <a
+            href="https://affpa.top/L?tag=d_3229053m_16303c_&site=3229053&ad=16303&r=registration"
+            target="_blank"
+            class="inline-block bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-2 px-4 rounded-lg transition"
+          >
+            ابھی ڈپازٹ کریں
+          </a>
+        </div>
+      </section>
+
+      <section class="bg-gray-800 py-12 px-6 text-center">
+        <h3 class="text-2xl font-bold text-green-400 mb-6">
+          آج کے سب سے بڑے فاتحین (PKR)
+        </h3>
+        <div
+          class="grid md:grid-cols-2 gap-4 text-left max-w-4xl mx-auto text-sm text-green-300"
+        >
+          <p>👤 صارف ID: 1218473422 – 275,328 PKR</p>
+          <p>👤 صارف ID: 9912384741 – 221,900 PKR</p>
+          <p>👤 صارف ID: 3099234822 – 184,120 PKR</p>
+          <p>👤 صارف ID: 1187339121 – 150,000 PKR</p>
+          <p>👤 صارف ID: 4412900113 – 132,850 PKR</p>
+          <p>👤 صارف ID: 8283721091 – 128,440 PKR</p>
+          <p>👤 صارف ID: 7751937742 – 100,705 PKR</p>
+          <p>👤 صارف ID: 5554921811 – 98,330 PKR</p>
+          <p>👤 صارف ID: 1983238742 – 85,000 PKR</p>
+          <p>👤 صارف ID: 3377749301 – 79,210 PKR</p>
+        </div>
+      </section>
+
+      <section id="games" class="bg-gray-800 py-12 px-6 text-center">
+        <h3 class="text-2xl font-bold text-green-400 mb-6">سپورٹڈ گیمز</h3>
+        <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          <div class="bg-gray-700 p-6 rounded-xl shadow-lg">
+            <h4 class="text-xl font-bold mb-2">🎮 ایوی ایٹر</h4>
+            <p class="text-gray-300">
+              جہاز کے اڑنے سے پہلے کیش آؤٹ کا صحیح وقت جانئے! ہمارا AI ریئل ٹائم میں ٹیک آف پیٹرنز کو پہچانتا ہے۔
+            </p>
+          </div>
+          <div class="bg-gray-700 p-6 rounded-xl shadow-lg">
+            <h4 class="text-xl font-bold mb-2">💣 مائنز</h4>
+            <p class="text-gray-300">
+              بموں سے بچیں، منافع کمائیں۔ ہمارا نظام زیادہ سے زیادہ کمائی کے لیے کم رسک والے راستے تلاش کرتا ہے۔
+            </p>
+          </div>
+          <div class="bg-gray-700 p-6 rounded-xl shadow-lg">
+            <h4 class="text-xl font-bold mb-2">🥅 پینلٹی</h4>
+            <p class="text-gray-300">
+              شوٹ کرنے یا ڈائیو کرنے کا صحیح مقام جانئے۔ ڈیٹا پر مبنی پیشنگوئیوں کے ساتھ گول کیپر کو ہرائیں۔
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="how" class="bg-gray-900 py-12 px-6 text-center">
+        <h3 class="text-2xl font-bold text-green-400 mb-6">یہ کیسے کام کرتا ہے</h3>
+        <div class="max-w-3xl mx-auto space-y-4 text-gray-300">
+          <p>📡 ہمارا AI 24/7 لائیو گیم ڈیٹا اور پچھلے نتائج کو اسکین کرتا ہے۔</p>
+          <p>💡 مسلسل جیت کی طرف لے جانے والے پیٹرنز کی شناخت کرتا ہے۔</p>
+          <p>
+            📲 آپ کو قابل اعتماد ریئل ٹائم پیشنگوئی ملتی ہے - براہ راست آپ کے ڈیوائس پر۔
+          </p>
+        </div>
+      </section>
+
+      <section class="bg-black py-12 px-6 text-center">
+        <h3 class="text-xl font-bold text-green-400 mb-4">[ کنسول لاگ ]</h3>
+        <div class="console-box max-w-3xl mx-auto text-left" id="console">
+          <p>[INFO] پیشنگوئی سروس فعال ہے ✅</p>
+        </div>
+      </section>
+
+      <footer class="text-center text-gray-500 text-sm py-6">
+        © 2025 AI پیشنگو۔ 1xBet سے وابستہ نہیں۔ ذمہ داری سے استعمال کریں۔
+      </footer>
+    </div>
+
+    <script>
+      setTimeout(() => {
+        document.getElementById("loading").classList.add("hidden-screen");
+        document
+          .getElementById("mainContent")
+          .classList.remove("hidden-screen");
+      }, 3000);
+
+      const startButton = document.getElementById("startButton");
+      const idInputSection = document.getElementById("idInputSection");
+      const submitIdBtn = document.getElementById("submitIdBtn");
+      const betIdInput = document.getElementById("betIdInput");
+      const inputError = document.getElementById("inputError");
+      const errorBox = document.getElementById("errorBox");
+
+      startButton.addEventListener("click", () => {
+        startButton.classList.add("hidden");
+        idInputSection.classList.remove("hidden");
+      });
+
+      submitIdBtn.addEventListener("click", () => {
+        const value = betIdInput.value.trim();
+        const isValid = /^\d+$/.test(value);
+
+        if (!isValid || value.length < 6) {
+          inputError.classList.remove("hidden");
+        } else {
+          inputError.classList.add("hidden");
+          errorBox.classList.remove("hidden");
+        }
+      });
+    </script>
+  </body>
+</html>
